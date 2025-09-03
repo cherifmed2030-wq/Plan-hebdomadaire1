@@ -27,7 +27,6 @@
     "node": "22.x"
   },
   "prisma": {
-    "generate": "prisma generate",
-    "migrate": "prisma migrate deploy"
+    "generate": "prisma generate"
   }
 }
