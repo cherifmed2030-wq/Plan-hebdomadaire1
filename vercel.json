@@ -1,49 +1,54 @@
 {
-      "version": 2,
-      "routes": [
-              {
-                        "src": "/login",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/save-plan",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/save-notes",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/save-row",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/plans/(.*)",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/generate-word",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/generate-excel-workbook",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/api/(.*)",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/generate-ai-lesson-plan",
-                        "dest": "/server.js"
-              },
-              {
-                        "src": "/(.*\\..+)",
-                        "dest": "/public/$1"
-              },
-              {
-                        "src": "/(.*)",
-                        "dest": "/public/index.html"
-              }
-      ]
+  "version": 2,
+  "functions": {
+    "server.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/login",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/save-plan",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/save-notes",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/save-row",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/plans/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/generate-word",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/generate-excel-workbook",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/generate-ai-lesson-plan",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*\\..+)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.html"
+    }
+  ]
 }
