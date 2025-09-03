@@ -2,17 +2,27 @@
   "version": 2,
   "builds": [
     {
+      "src": "public/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "server.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["public/**", "prisma/**"]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    { "src": "/login", "dest": "/server.js" },
+    { "src": "/save-plan", "dest": "/server.js" },
+    { "src": "/save-notes", "dest": "/server.js" },
+    { "src": "/save-row", "dest": "/server.js" },
+    { "src": "/plans/(.*)", "dest": "/server.js" },
+    { "src": "/generate-word", "dest": "/server.js" },
+    { "src": "/generate-excel-workbook", "dest": "/server.js" },
+    { "src": "/api/(.*)", "dest": "/server.js" },
+    { "src": "/generate-ai-lesson-plan", "dest": "/server.js" },
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/public/index.html"
     }
   ]
 }
