@@ -21,6 +21,10 @@
     { "src": "/api/(.*)", "dest": "/server.js" },
     { "src": "/generate-ai-lesson-plan", "dest": "/server.js" },
     {
+      "src": "/(.*\\..*)",
+      "dest": "/public/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/index.html"
     }
