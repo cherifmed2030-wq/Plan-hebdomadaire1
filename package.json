@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "prisma generate",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -24,9 +25,10 @@
     "prisma": "^5.17.0"
   },
   "engines": {
-    "node": "22.x"
+    "node": "18.x"
   },
   "prisma": {
     "generate": "prisma generate"
   }
 }
+
